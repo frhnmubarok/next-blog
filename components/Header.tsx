@@ -1,9 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
 
 const Header: React.FC = () => {
-  const { theme, setTheme } = useTheme();
   return (
     <header className='py-2 flex justify-between'>
       <Link href='/'>
@@ -14,13 +12,6 @@ const Header: React.FC = () => {
           </span>
         </a>
       </Link>
-      <button
-        aria-label='Toggle Dark Mode'
-        type='button'
-        className='p-3 h-12 w-12 order-2 md:order-3 hidden'
-        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-        Toggle
-      </button>
     </header>
   );
 };

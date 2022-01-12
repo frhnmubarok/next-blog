@@ -2,13 +2,11 @@ import '../styles/globals.css';
 import 'tailwindcss/tailwind.css';
 import type { AppProps } from 'next/app';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ThemeProvider } from 'next-themes';
 
 import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <ThemeProvider attribute='class'>
       <Layout>
         <AnimatePresence exitBeforeEnter>
           <motion.main
@@ -26,7 +24,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           </motion.main>
         </AnimatePresence>
       </Layout>
-    </ThemeProvider>
   );
 }
 
