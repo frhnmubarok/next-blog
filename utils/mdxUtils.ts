@@ -27,7 +27,7 @@ export const getPost = (slug: string): Post => {
   return { data, content };
 };
 
-export const  getPostItems = (filePath: string, fields: string[] = []): Items => {
+export const getPostItems = (filePath: string, fields: string[] = []): Items => {
   const slug = filePath.replace(/\.mdx?$/, '');
   const { data, content } = getPost(slug);
 
@@ -45,7 +45,7 @@ export const  getPostItems = (filePath: string, fields: string[] = []): Items =>
     }
   });
   return items;
-}
+};
 
 export function getAllPosts(fields: string[]): Items[] {
   const filePaths = getPostsFilePaths();
@@ -54,4 +54,3 @@ export function getAllPosts(fields: string[]): Items[] {
     .sort((post1, post2) => (post1.date > post2.date ? 1 : -1));
   return posts;
 }
-

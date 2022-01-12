@@ -5,12 +5,10 @@ import Link from 'next/link';
 import { getAllPosts } from '../utils/mdxUtils';
 import Image from 'next/image';
 
-// props type
 type Props = {
   posts: [IPost];
 };
 
-// component render function
 const Home: NextPage<Props> = ({ posts }: Props) => {
   return (
     <div>
@@ -20,7 +18,6 @@ const Home: NextPage<Props> = ({ posts }: Props) => {
             key={post.slug}
             className='rounded-lg border-2 border-gray-300 border-dashed overflow-hidden shadow-sm pb-4 hover:-translate-y-1 hover:shadow-xl transition-all duration-200 ease-in-out'>
             <div className='mb-0'>
-              {/* <Thumbnail slug={post.slug} title={post.title} src={post.thumbnail} /> */}
               <Link href={`/post/${post.slug}`}>
                 <a>
                   <Image

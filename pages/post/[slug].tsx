@@ -14,10 +14,7 @@ type Props = {
   frontMatter: Omit<IPost, 'slug'>;
 };
 
-
 const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
-
-
   return (
     <div>
       <article className='prose prose-cyan max-w-none'>
